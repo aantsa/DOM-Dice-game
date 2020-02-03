@@ -14,9 +14,9 @@ var scores, roundScore, activePlayer, gamePlaying;
 init();
 
 
-document.querySelector('.btn-roll').addEventListener('click', function() {
-    if(gamePlaying) {
-        // 1. Generate random number
+document.querySelector('.btn-roll').addEventListener('click', function () {
+    if (gamePlaying) {
+        // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
 
         //2. Display the result
@@ -34,11 +34,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
             //Next player
             nextPlayer();
         }
-    }    
+    }
 });
 
 
-document.querySelector('.btn-hold').addEventListener('click', function() {
+document.querySelector('.btn-hold').addEventListener('click', function () {
     if (gamePlaying) {
         // Add current score to total score
         scores[activePlayer] += roundScore;
@@ -82,7 +82,7 @@ function init() {
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
-    
+
     document.querySelector('.dice').style.display = 'none';
 
     document.getElementById('score-0').textContent = '0';
